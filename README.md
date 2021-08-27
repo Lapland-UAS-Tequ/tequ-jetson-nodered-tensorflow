@@ -59,7 +59,15 @@ sudo apt-get install curl
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 ```
 
-### 10. Install tensorflow 1.15.0 
+```
+sudo systemctl enable nodered.service
+```
+
+```
+sudo systemctl start nodered.service
+```
+
+### 10. Install Tensorflow 2
 
 https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
 
@@ -80,11 +88,7 @@ sudo pip3 install -U numpy==1.19.4 future==0.18.2 mock==3.0.5 h5py==2.10.0 keras
 ```
 
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/tensorflow_gpu-1.15.0+nv20.1-cp36-cp36m-linux_aarch64.whl
-```
-
-```
-sudo pip3 install tensorflow-gpu/tensorflow_gpu-1.15.0+nv20.1-cp36-cp36m-linux_aarch64.whl
+sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v46 tensorflow
 ```
 
 ### 11. Check that tensorflow is working in Python
@@ -103,13 +107,8 @@ import tensorflow
 cd ~/.node-red
 ```
 ```
-npm install @tensorflow/tfjs-node-gpu@1.4.0
+npm install @tensorflow/tfjs-node-gpu@3.8.0 
 ```
-```
-npm install @cloud-annotations/models-node-gpu
-```
-
-Installation will finish with errors. Ignore errors and continue.
 
 ### 13. Move to folder tfjs-node-gpu
 
