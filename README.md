@@ -1,21 +1,21 @@
 # jetson-nodered-tensorflow
 
-This guide is for using Tensorflow (tfjs-node-gpu) in Node-RED using Jetson Nano or Xavier NX device and run object detection on images. Might work on Xavier AGX also, but I didnt have one to test. At the moment of writing this, tfjs-node(-gpu) directly depends on libtensorflow version 1.15.0, so downgrading CUDA on Jetson Xavier NX is necessary to make things work. If you are using Jetson Nano, you can install Jetpack 4.3 from official NVIDIA Jetpack 4.3 image and start from list item number 9.
+This guide is for using Tensorflow (tfjs-node-gpu) in Node-RED using Jetson Nano or Xavier NX device and run object detection on images. Might work on Xavier AGX also, but I didnt have one to test. 
 
 After running all commands you should have following versions of the components
 
 | Software      | Version       | 
 | ------------- |:-------------:| 
-| Jetpack       | 4.5.1 or 4.3  | 
+| Jetpack       | 4.6           | 
 | CUDA          | 10.0.326      |  
-| cuDNN         | 7.6.3.28	    | 
-| libtensorflow | 1.15.0		    | 
+| cuDNN         | 8.2	    | 
+| libtensorflow | 		    | 
 | node-red	    | 2.0.5	        |
-| tfjs-node-gpu | 1.4.0	        | 
+| tfjs-node-gpu | 3.8.0	        | 
 
 ## Installation
 
-### 1. Install Jetpack 4.5.1 for Jetson NX Xavier
+### 1. Install Jetpack 4.6 for Jetson NX Xavier/Nano
 
 https://developer.nvidia.com/embedded/learn/getting-started-jetson
 
@@ -25,85 +25,7 @@ https://developer.nvidia.com/embedded/learn/getting-started-jetson
 sudo apt update && sudo apt upgrade
 ```
 
-### 3. Remove current CUDA installation
-
-```
-sudo apt purge cuda-tools-10-2 libcudnn8 cuda-documentation-10-2 cuda-samples-10-2 nvidia-l4t-graphics-demos ubuntu-wallpapers-bionic libreoffice* chromium-browser* thunderbird fonts-noto-cjk
-```
-
-```
-sudo apt autoremove
-```
-
-```
-sudo reboot
-```
-
-### 4. Create folder for files
-
-```
-cd /home/
-```
-
-```
-cd /<your user name>/
-```
-
-```
-mkdir cuda_files
-```
-
-```
-cd /home/cuda_files
-```
-
-### 5. Download new CUDA & cuDNN files
-
-```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/cuda-repo-l4t-10-0-local-10.0.326_1.0-1_arm64.deb
-```
-
-```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libcudnn7_7.6.3.28-1+cuda10.0_arm64.deb
-```
-
-### 6. Install CUDA 10
-
-```
-sudo dpkg -i cuda-repo-l4t-8-0-local_8.0.34-1_arm64.deb
-```
-
-```
-sudo apt update
-```
-
-```
-sudo apt search cuda
-```
-
-```
-sudo apt install cuda-toolkit-10.0
-```
-
-```
-sudo apt install cuda-samples-10.0
-```
-
-```
-export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-```
-
-```
-export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-``` 
-
-### 7. Install cuDNN
-
-```
-sudo apt install ./libcudnn7_7.6.3.28-1+cuda10.0_arm64.deb
-```
-
-### 8. Install jtop and check that everything is installed correctly
+### 3. Install jtop 
 
 ```
 sudo apt-get install python3-pip
@@ -114,10 +36,16 @@ sudo -H pip3 install -U jetson-stats
 ```
 
 ```
-jtop
+sudo systemctl restart jetson_stats.service
 ```
 
-![alt text](https://github.com/juhaautioniemi/jetson-nodered-tensorflow/blob/master/images/jtop_image.JPG "jtop")
+```
+sudo reboot
+```
+
+```
+jtop
+```
 
 ### 9. Install node-red (start here if you have Jetson Nano with Jetpack 4.3)
 
@@ -163,7 +91,7 @@ python3
 import tensorflow
 ```
 
-### 12. Install tfjs-node-gpu@1.4.0 and @cloud-annotations/models-node-gpu 
+### 12. Install tfjs-node-gpu@3.8.0 
 
 ```
 cd ~/.node-red
@@ -237,9 +165,6 @@ Copy and import 'example-ai-detect-v2.json' to your Node-RED.
 
 You should see something like this in Node-RED log after flow is deployed, if everything regarding to Tensorflow went well:
 
-![alt text](
-https://github.com/juhaautioniemi/jetson-nodered-tensorflow/blob/master/images/nodered_tf.JPG "Node-RED log")
-
 ### 20. Use Tensorflow in Node-RED
 
 Configure model folder
@@ -248,16 +173,13 @@ Inject image to flow and start detecting objects.
 
 First inference is slow and it takes something like ~5-30 seconds. After that it should run smoothly.
 
-![alt text](
-https://github.com/juhaautioniemi/jetson-nodered-tensorflow/blob/master/images/example-1.JPG "Node-RED log")
-
 ### 21. Custom object detection model
 
 If you need to build your own model, you can follow this guide:
 
 https://github.com/juhaautioniemi/tequ-tf1-ca-training-pipeline
 
-## 22. Some inference benchmarking 
+## 22. Disable GUI
 
 GUI is disabled
 
@@ -268,39 +190,3 @@ sudo service gdm stop
 ```
 sudo systemctl set-default multi-user.target
 ```
-
-Inference speeds for MJPEG stream from Raspberry PI4 with HQ-camera
-
-Streaming is started with command 
-
-```
-raspivid -v -n -b 25000000 -qp 10 -md 2 -w 1920 -h 1080 -fps 25 -cd MJPEG -n -rot 180 -t 0 -o tcp://127.0.0.1:50001
-```
-
-*md (mode) and w and h parameters can vary.
-
-Raspivid MJPEG stream is parsed in Node-RED at RPI4 and rerouted to Jetson via Websocket.
-
-NVIDIA Jetson Xavier NX
-
-| Resolution    | FPS           | Frame size    |
-| ------------- |:-------------:|:-------------:| 
-| 320 x 240     | 15            | ~35 kB        |
-| 1280 x 720    | 10            | ~115 kB       |
-| 1920 x 1080   | 8	            | ~122 kB       |
-| 4000 x 600    | 8	            | ~112 kB       |
-| 2028 x 1520   | 5             | ~121 kB       |
-| 4056 x 1520   | 3		          | ~137 kB       |
-
-NVIDIA Jetson Nano
-
-| Resolution    | FPS           | Frame size    |
-| ------------- |:-------------:|:-------------:| 
-| 320 x 240     | 8             | ~35 kB        |
-| 1280 x 720    | 6             | ~115 kB       |
-| 1920 x 1080   | 5	            | ~122 kB       |
-| 4000 x 600    | 4             | ~112 kB       |
-| 2028 x 1520   | 3             | ~121 kB       |
-| 4056 x 1520   | 2		          | ~137 kB       |
-
-
