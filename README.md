@@ -110,6 +110,17 @@ cd ~/.node-red
 npm install @tensorflow/tfjs-node-gpu@3.8.0 
 ```
 
+
+### 12.  Check that tensorflow is working in Node.js
+
+```
+node
+```
+
+```
+var tf = require('@tensorflow/tfjs-node-gpu')
+```
+
 ### 13. Move to folder tfjs-node-gpu
 
 ```
