@@ -7,10 +7,12 @@ After running all commands you should have following versions of the components
 | Software      | Version       | 
 | ------------- |:-------------:| 
 | Jetpack       | 4.6           | 
-| CUDA          | 10.0.326      |  
-| cuDNN         | 8.2	    | 
-| libtensorflow | 		    | 
-| node-red	    | 2.0.5	        |
+| L4T           | 32.6.1        | 
+| CUDA          | 10.0.300      |  
+| cuDNN         | 8.2.1.32	    | 
+| libtensorflow | 		          | 
+| Node-RED	    | 2.0.5	        |
+| Node.js       | 14.17.5       |
 | tfjs-node-gpu | 3.8.0	        | 
 
 ## Installation
@@ -47,7 +49,11 @@ sudo reboot
 jtop
 ```
 
-### 9. Install node-red (start here if you have Jetson Nano with Jetpack 4.3)
+### 9. Install Node-RED 
+
+```
+sudo apt-get install curl
+```
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
@@ -161,7 +167,7 @@ Go to:
 
 https://github.com/juhaautioniemi/tequ-api-client/
 
-Copy and import 'example-ai-detect-v2.json' to your Node-RED.
+Copy and import 'example-ai-detect-sm.json' to your Node-RED.
 
 You should see something like this in Node-RED log after flow is deployed, if everything regarding to Tensorflow went well:
 
