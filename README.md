@@ -90,11 +90,11 @@ cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-gpu-linux-arm64-1.15.0.tar.gz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/*********************************
 ```
 
 ```
-tar xzvf libtensorflow-gpu-linux-arm64-1.15.0.tar.gz
+tar xzvf ***********************************
 ```
 
 ```
@@ -143,9 +143,9 @@ Go to:
 
 https://github.com/juhaautioniemi/tequ-api-client/
 
-Copy and import 'example-ai-detect-sm.json' to your Node-RED.
+Copy, import and deploy 'example-ai-detect-sm.json' to your Node-RED.
 
-You should see something like this in Node-RED log after flow is deployed, if everything regarding to Tensorflow went well:
+**For unknown reason loading the model takes 1-3 minutes**
 
 ### 10. Use Tensorflow in Node-RED
 
