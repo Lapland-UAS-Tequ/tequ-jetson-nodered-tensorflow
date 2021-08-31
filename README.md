@@ -1,6 +1,10 @@
 # tequ-jetson-nodered-tensorflow
 
-This guide is for installing and configuring Tensorflow 2 (tfjs-node-gpu) in Node-RED using Jetson Nano or Xavier NX device and run object detection on images. Might work on Xavier AGX also, but I didnt have one to test. 
+This guide is for installing and configuring Tensorflow 2 (tfjs-node-gpu) on Jetson Nano or Xavier NX device and run object detection on images using Node-RED. Might work on Xavier AGX also, but I didnt have one to test. 
+
+After installation and configuration it is possible to at least run Tensorflow 2 SavedModel, Tensorflow 1 tfjs-frozen-graph, Tensorflow.js models exported from Microsoft Azure Custom Vision and Tensorflow.js models exported from Google Teachable Machine. Example flows and subflows are available from:
+
+https://github.com/juhaautioniemi/tequ-api-client/
 
 After running all commands you should have following versions of the components
 
@@ -155,7 +159,7 @@ First inference is slow and it takes something like ~5-30 seconds. After that it
 
 If you need to build your own model, you can follow this guide:
 
-https://github.com/juhaautioniemi/tequ-tf1-ca-training-pipeline
+https://github.com/juhaautioniemi/tequ-tf2-ca-training-pipeline
 
 ## OPTIONALLY 12. Disable GUI
 
