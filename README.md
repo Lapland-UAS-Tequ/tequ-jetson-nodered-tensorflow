@@ -90,11 +90,11 @@ cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/*********************************
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4.1-jetson.tar.gz
 ```
 
 ```
-tar xzvf ***********************************
+tar xzvf libtensorflow-2.4.1-jetson.tar.gz
 ```
 
 ```
