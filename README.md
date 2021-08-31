@@ -1,6 +1,6 @@
-# jetson-nodered-tensorflow
+# tequ-jetson-nodered-tensorflow
 
-This guide is for using Tensorflow (tfjs-node-gpu) in Node-RED using Jetson Nano or Xavier NX device and run object detection on images. Might work on Xavier AGX also, but I didnt have one to test. 
+This guide is for using Tensorflow 2 saved models (tfjs-node-gpu) in Node-RED using Jetson Nano or Xavier NX device and run object detection on images. Might work on Xavier AGX also, but I didnt have one to test. 
 
 After running all commands you should have following versions of the components
 
@@ -8,7 +8,7 @@ After running all commands you should have following versions of the components
 | ------------- |:-------------:| 
 | Jetpack       | 4.6           | 
 | L4T           | 32.6.1        | 
-| CUDA          | 10.0.300      |  
+| CUDA          | 10.2.300      |  
 | cuDNN         | 8.2.1.32	    | 
 | libtensorflow | 2.4.1		      | 
 | Node-RED	    | 2.0.5	        |
