@@ -2,7 +2,9 @@
 
 This guide is for installing and configuring Tensorflow 2 (tfjs-node-gpu) on Jetson Nano or Xavier NX device and run object detection on images using Node-RED. Might work on Xavier AGX also, but I didnt have one to test. 
 
-After installation and configuration it is possible to at least run Tensorflow 2 SavedModel, Tensorflow 1 tfjs-frozen-graph, Tensorflow.js models exported from Microsoft Azure Custom Vision and Tensorflow.js models exported from Google Teachable Machine. Example flows and subflows are available from:
+After installation and configuration it is possible to at least run Tensorflow 2 SavedModel, Tensorflow 1 tfjs-frozen-graph, Tensorflow.js models exported from Microsoft Azure Custom Vision and Tensorflow.js models exported from Google Teachable Machine. 
+
+Example flows and subflows are available from:
 
 https://github.com/juhaautioniemi/tequ-api-client/
 
