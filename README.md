@@ -18,7 +18,7 @@ After running all commands you should have following versions of the components
 | cuDNN         | 8.2.1.32	    | 
 | libtensorflow | 2.4.1		      | 
 | Node-RED	    | 2.0.5	        |
-| Node.js       | 14.17.5       |
+| Node.js       | 16.9.1        |
 | tfjs-node-gpu | 3.9.0	        | 
 
 ## Installation
@@ -80,7 +80,7 @@ cd ~/.node-red
 ```
 
 ```
-npm install @tensorflow/tfjs-node-gpu@3.9.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.9.0 
 ```
 
 Installation will finish with some errors. Ignore them.
