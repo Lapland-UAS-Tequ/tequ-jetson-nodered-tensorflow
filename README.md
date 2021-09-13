@@ -110,6 +110,10 @@ npm run build-addon-from-source
 ### 6.  Check that tensorflow is working in Node.js
 
 ```
+cd ~/.node-red
+```
+
+```
 node
 ```
 
