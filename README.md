@@ -73,7 +73,17 @@ sudo systemctl enable nodered.service
 sudo systemctl start nodered.service
 ```
 
-### 5. Install tfjs-node-gpu
+### 5. Upgrade Node.js 
+
+```
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+```
+
+```
+sudo apt-get install -y nodejs
+```
+
+### 6. Install tfjs-node-gpu
 
 ```
 cd ~/.node-red
@@ -85,7 +95,7 @@ npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.9.0
 
 Installation will finish with some errors. Ignore them.
 
-### 6. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.4.1)
+### 7. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.4.1)
 ```
 mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
@@ -110,7 +120,7 @@ sudo npm install --global node-pre-gyp
 npm run build-addon-from-source
 ```
 
-### 6.  Check that tensorflow is working in Node.js
+### 8.  Check that tensorflow is working in Node.js
 
 ```
 cd ~/.node-red
@@ -124,7 +134,7 @@ node
 var tf = require('@tensorflow/tfjs-node-gpu')
 ```
 
-### 7. Install canvas for annotating images
+### 9. Install canvas for annotating images
 
 https://www.npmjs.com/package/canvas
 
@@ -138,7 +148,7 @@ sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev l
 npm install canvas
 ```
 
-### 8. Use Tensorflow in Node-RED
+### 10. Use Tensorflow in Node-RED
 
 Start Node-RED
 
@@ -146,7 +156,7 @@ Start Node-RED
 node-red-start
 ```
 
-### 9. Import example flow 
+### 11. Import example flow 
 
 Go to:
 
@@ -156,7 +166,7 @@ Copy, import and deploy 'example-ai-detect-sm.json' to your Node-RED.
 
 **For unknown reason loading the model takes 1-3 minutes**
 
-### 10. Use Tensorflow in Node-RED
+### 12. Use Tensorflow in Node-RED
 
 Configure model folder
 
@@ -164,13 +174,13 @@ Inject image to flow and start detecting objects.
 
 First inference is slow and it takes something like ~5-30 seconds. After that it should run smoothly.
 
-### 11. Custom object detection model
+### 13. Custom object detection model
 
 If you need to build your own model, you can follow this guide:
 
 https://github.com/juhaautioniemi/tequ-tf2-ca-training-pipeline
 
-## OPTIONALLY 12. Disable GUI
+## OPTIONALLY 14. Disable GUI
 
 ```
 sudo service gdm stop
