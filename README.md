@@ -180,7 +180,7 @@ If you need to build your own model, you can follow this guide:
 
 https://github.com/juhaautioniemi/tequ-tf2-ca-training-pipeline
 
-## OPTIONALLY 14. Disable GUI
+### OPTIONALLY 14. Disable GUI
 
 ```
 sudo service gdm stop
