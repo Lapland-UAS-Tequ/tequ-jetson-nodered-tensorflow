@@ -86,6 +86,9 @@ npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.9.0
 Installation will finish with some errors. Ignore them.
 
 ### 6. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.4.1)
+```
+mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
+```
 
 ```
 cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
