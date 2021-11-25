@@ -6,7 +6,7 @@ After installation and configuration it is possible to at least run Tensorflow 2
 
 Example flows and subflows are available from:
 
-https://github.com/juhaautioniemi/tequ-api-client/
+https://github.com/Lapland-UAS-Tequ/tequ-api-client/
 
 After running all commands you should have following versions of the components
 
@@ -160,7 +160,7 @@ node-red-start
 
 Go to:
 
-https://github.com/juhaautioniemi/tequ-api-client/
+https://github.com/Lapland-UAS-Tequ/tequ-api-client/
 
 Copy, import and deploy 'example-ai-detect-sm.json' to your Node-RED.
 
@@ -178,7 +178,7 @@ First inference is slow and it takes something like ~5-30 seconds. After that it
 
 If you need to build your own model, you can follow this guide:
 
-https://github.com/juhaautioniemi/tequ-tf2-ca-training-pipeline
+https://github.com/Lapland-UAS-Tequ/tequ-tf2-ca-training-pipeline
 
 ### OPTIONALLY 14. Disable GUI
 
