@@ -106,13 +106,31 @@ node-red-start
 
 ### 7. Import example flow 
 
-Go to:
+Go to: 
 
 https://github.com/Lapland-UAS-Tequ/tequ-api-client/
 
-Copy, import and deploy 'example-ai-detect-sm.json' to your Node-RED.
+Install dependencies
 
-**For unknown reason loading the model takes 1-3 minutes**
+```
+cd ~/.node-red
+```
+
+```
+npm install node-red-contrib-image-info
+```
+
+```
+npm install  node-red-node-exif
+```
+
+```
+node-red-restart
+```
+
+Copy, import and deploy 'ai-detect-sm.json' to your Node-RED.
+
+**For unknown reason loading the model might take 1-3 minutes**
 
 ### 8. Use Tensorflow in Node-RED
 
