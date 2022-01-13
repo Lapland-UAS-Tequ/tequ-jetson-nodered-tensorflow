@@ -23,67 +23,11 @@ After running all commands you should have following versions of the components
 
 ## Installation
 
-### 1. Install Jetpack 4.6 for Jetson NX Xavier/Nano
+### 1. Prepare Jetson Nano / Xavier NX
 
-https://developer.nvidia.com/embedded/learn/getting-started-jetson
+https://github.com/Lapland-UAS-Tequ/tequ-jetson-setup
 
-### 2. Run update & upgrade
-
-```
-sudo apt update && sudo apt upgrade
-```
-
-### 3. Install jtop 
-
-```
-sudo apt-get install python3-pip
-```
-
-```
-sudo -H pip3 install -U jetson-stats
-```
-
-```
-sudo systemctl restart jetson_stats.service
-```
-
-```
-sudo reboot
-```
-
-```
-jtop
-```
-
-### 4. Install Node-RED 
-
-```
-sudo apt-get install curl
-```
-
-```
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
-```
-
-```
-sudo systemctl enable nodered.service
-```
-
-```
-sudo systemctl start nodered.service
-```
-
-### 5. Upgrade Node.js 
-
-```
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-```
-
-```
-sudo apt-get install -y nodejs
-```
-
-### 6. Install tfjs-node-gpu
+### 2. Install tfjs-node-gpu
 
 ```
 cd ~/.node-red
@@ -95,7 +39,7 @@ npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.13.0
 
 If installation finish with some errors. Ignore them at this point.
 
-### 7. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.4.1)
+### 3. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.4.1)
 ```
 mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
@@ -120,7 +64,7 @@ sudo npm install --global node-pre-gyp
 npm run build-addon-from-source
 ```
 
-### 8.  Check that tensorflow is working in Node.js
+### 4.  Check that tensorflow is working in Node.js
 
 ```
 cd ~/.node-red
@@ -134,7 +78,7 @@ node
 var tf = require('@tensorflow/tfjs-node-gpu')
 ```
 
-### 9. Install canvas for annotating images
+### 5. Install canvas for annotating images
 
 https://www.npmjs.com/package/canvas
 
@@ -152,7 +96,7 @@ cd ~/.node-red
 npm install canvas
 ```
 
-### 10. Use Tensorflow in Node-RED
+### 6. Use Tensorflow in Node-RED
 
 Start Node-RED
 
@@ -160,7 +104,7 @@ Start Node-RED
 node-red-start
 ```
 
-### 11. Import example flow 
+### 7. Import example flow 
 
 Go to:
 
@@ -170,7 +114,7 @@ Copy, import and deploy 'example-ai-detect-sm.json' to your Node-RED.
 
 **For unknown reason loading the model takes 1-3 minutes**
 
-### 12. Use Tensorflow in Node-RED
+### 8. Use Tensorflow in Node-RED
 
 Configure model folder
 
@@ -178,7 +122,7 @@ Inject image to flow and start detecting objects.
 
 First inference is slow and it takes something like ~5-30 seconds. After that it should run smoothly.
 
-### 13. Custom object detection model
+### 9. Custom object detection model
 
 If you need to build your own model, you can follow this guide:
 
