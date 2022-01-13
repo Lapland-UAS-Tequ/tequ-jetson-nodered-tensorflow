@@ -17,9 +17,9 @@ After running all commands you should have following versions of the components
 | CUDA          | 10.2.300      |  
 | cuDNN         | 8.2.1.32	    | 
 | libtensorflow | 2.4.1		      | 
-| Node-RED	    | 2.0.5	        |
-| Node.js       | 16.9.1        |
-| tfjs-node-gpu | 3.9.0	        | 
+| Node-RED	    | 2.1.5	        |
+| Node.js       | 16.13.2       |
+| tfjs-node-gpu | 3.13.0	      | 
 
 ## Installation
 
@@ -93,7 +93,7 @@ cd ~/.node-red
 npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.9.0 
 ```
 
-Installation will finish with some errors. Ignore them.
+If installation finish with some errors. Ignore them at this point.
 
 ### 7. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.4.1)
 ```
