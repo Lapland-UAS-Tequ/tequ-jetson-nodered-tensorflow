@@ -90,7 +90,7 @@ cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.9.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.13.0 
 ```
 
 If installation finish with some errors. Ignore them at this point.
@@ -142,6 +142,10 @@ Install dependencies first
 
 ```
 sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+```
+
+```
+cd ~/.node-red
 ```
 
 ```
