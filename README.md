@@ -96,21 +96,9 @@ cd ~/.node-red
 npm install canvas
 ```
 
-### 6. Use Tensorflow in Node-RED
+## Example flow to use Tensorflow in Node-RED
 
-Start Node-RED
-
-```
-node-red-start
-```
-
-### 7. Import example flow 
-
-Go to: 
-
-https://github.com/Lapland-UAS-Tequ/tequ-api-client/
-
-Install dependencies
+### 1. Install dependencies
 
 ```
 cd ~/.node-red
@@ -121,26 +109,57 @@ npm install node-red-contrib-image-info
 ```
 
 ```
-npm install  node-red-node-exif
+npm install node-red-node-exif
+```
+
+```
+npm install node-red-contrib-browser-utils
+```
+
+```
+npm install node-red-contrib-image-output
 ```
 
 ```
 node-red-restart
 ```
 
-Copy, import and deploy 'ai-detect-sm.json' to your Node-RED.
 
-**For unknown reason loading the model might take 1-3 minutes**
+### 2. Download object detection model
 
-### 8. Use Tensorflow in Node-RED
+Download example model and unzip to /.node-red/savedmodel
 
-Configure model folder
+```
+cd ~/.node-red
+```
+
+```
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/example-model.zip
+```
+
+```
+sudo apt-get install unzip
+```
+
+```
+unzip example-model.zip
+```
+
+### 3. Import and deploy example flow
+
+```
+example.json
+```
+
+**Loading the model might take 1-3 minutes**
+
+### 4. Use Tensorflow in Node-RED
 
 Inject image to flow and start detecting objects.
 
-First inference is slow and it takes something like ~5-30 seconds. After that it should run smoothly.
+First inference is slow and it takes something like ~5-30 seconds. After that it should run smoothly. Max fps depends of image size and board you are using.
 
-### 9. Custom object detection model
+### 5. Custom object detection model
 
 If you need to build your own model, you can follow this guide:
 
