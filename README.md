@@ -164,13 +164,3 @@ First inference is slow and it takes something like ~5-30 seconds. After that it
 If you need to build your own model, you can follow this guide:
 
 https://github.com/Lapland-UAS-Tequ/tequ-tf2-ca-training-pipeline
-
-### OPTIONALLY 14. Disable GUI
-
-```
-sudo service gdm stop
-```
-
-```
-sudo systemctl set-default multi-user.target
-```
