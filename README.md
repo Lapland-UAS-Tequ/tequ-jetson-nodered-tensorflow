@@ -134,7 +134,7 @@ cd ~/.node-red
 ```
 
 ```
-wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/example-model.zip
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/example_savedmodel.zip
 ```
 
 ```
@@ -148,7 +148,7 @@ unzip example-model.zip
 ### 3. Import and deploy example flow
 
 ```
-example.json
+
 ```
 
 **Loading the model might take 1-3 minutes**
