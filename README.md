@@ -96,7 +96,7 @@ cd ~/.node-red
 npm install canvas
 ```
 
-## Example flow to use Tensorflow in Node-RED
+## Use Tensorflow in Node-RED
 
 ### 1. Install dependencies
 
