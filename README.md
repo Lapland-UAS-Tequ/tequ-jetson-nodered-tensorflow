@@ -98,7 +98,7 @@ npm install canvas
 
 ## Use Tensorflow in Node-RED
 
-This example uses SSD MobileNet v2 320x320 model from TensorFlow 2 Detection Model Zoo. Model is used directly in savedemodel format. 
+This example uses SSD MobileNet v2 320x320 model from TensorFlow 2 Detection Model Zoo. Model is used directly in savedemodel format.
 
 https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md
 
