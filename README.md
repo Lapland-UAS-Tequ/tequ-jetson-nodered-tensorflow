@@ -67,7 +67,7 @@ sudo npm install --global node-pre-gyp
 ```
 
 ```
-npm run build-addon-from-source
+sudo npm run build-addon-from-source
 ```
 
 ### 4.  Check that tensorflow is working in Node.js
