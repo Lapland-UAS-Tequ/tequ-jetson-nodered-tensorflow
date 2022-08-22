@@ -152,7 +152,7 @@ sudo apt-get install unzip
 ```
 
 ```
-unzip example-model.zip
+unzip example_savedmodel.zip
 ```
 
 ### 3. Import and deploy example flow
