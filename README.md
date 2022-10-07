@@ -84,6 +84,9 @@ node
 var tf = require('@tensorflow/tfjs-node-gpu')
 ```
 
+You should see something that GPU is loaded and no errors or missing files.
+
+
 ### 5. Install canvas for annotating images
 
 https://www.npmjs.com/package/canvas
