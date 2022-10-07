@@ -142,6 +142,10 @@ npm install node-red-contrib-msg-speed
 ```
 
 ```
+npm install node-red-node-smooth
+```
+
+```
 node-red-restart
 ```
 
