@@ -134,6 +134,14 @@ npm install node-red-contrib-image-output
 ```
 
 ```
+npm install node-red-contrib-moment
+```
+
+```
+npm install node-red-contrib-msg-speed
+```
+
+```
 node-red-restart
 ```
 
