@@ -189,9 +189,7 @@ Copy and import this flow into your Node-RED workspace.
 
 ### 4. Use Tensorflow in Node-RED
 
-Inject image to flow and start detecting objects.
-
-First inference is slow and it takes something like ~5-30 seconds. After that it should run smoothly. Max fps depends of image size and board you are using.
+Inject image to flow and start detecting objects. Max fps depends of image size and Jetson board that you are using.
 
 ### 5. Custom object detection model
 
