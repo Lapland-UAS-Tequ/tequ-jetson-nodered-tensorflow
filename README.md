@@ -210,7 +210,11 @@ git clone https://github.com/tensorflow/tensorflow.git
 ```
 
 ```
-git checkout 2.11
+cd tensorflow
+```
+
+```
+git checkout r2.11
 ```
 
 ```
