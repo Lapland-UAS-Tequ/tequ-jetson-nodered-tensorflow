@@ -6,7 +6,7 @@ https://www.tequ.fi/en/project-bank/fish-iot/
 
 # tequ-jetson-nodered-tensorflow
 
-This guide is for installing and configuring Tensorflow 2 (tfjs-node-gpu) on Jetson Nano or Xavier NX device and run object detection on images using Node-RED. Might work on Xavier AGX also, but I didnt have one to test. 
+This guide is for installing and configuring Tensorflow 2 (tfjs-node-gpu) on Jetson device and run object detection on images using Node-RED.
 
 After installation and configuration it is possible to at least run Tensorflow 2 SavedModel, Tensorflow 1 tfjs-frozen-graph, Tensorflow.js models exported from Microsoft Azure Custom Vision and Tensorflow.js models exported from Google Teachable Machine. 
 
@@ -14,22 +14,22 @@ Example flows and subflows are available from:
 
 https://github.com/Lapland-UAS-Tequ/tequ-api-client/
 
-After running all commands you should have following versions of the components
+This repository is tested with following versions of the components. If you wish to use another setup, there might be issues and you might have to build Tensorflow from source for your Jetson machine.
 
 | Software      | Version       | 
 | ------------- |:-------------:| 
-| Jetpack       | 4.6           | 
-| L4T           | 32.6.1        | 
-| CUDA          | 10.2.300      |  
-| cuDNN         | 8.2.1.32	    | 
-| libtensorflow | 2.4.1		      | 
-| Node-RED	    | 2.1.5	        |
-| Node.js       | 16.13.2       |
-| tfjs-node-gpu | 3.13.0	      | 
+| Jetpack       | 5.0.2         | 
+| L4T           | 35.1.1        | 
+| CUDA          | 11.4          |  
+| cuDNN         | 8.4.1.50	    | 
+| libtensorflow | 2.11.0		    | 
+| Node-RED	    | 3.0.2	        |
+| Node.js       | 18.12.1       |
+| tfjs-node-gpu | 4.1.0	        | 
 
 ## Installation
 
-### 1. Prepare Jetson Nano / Xavier NX
+### 1. Prepare Jetson 
 
 https://github.com/Lapland-UAS-Tequ/tequ-jetson-setup
 
@@ -40,12 +40,10 @@ cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.13.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.1.0 
 ```
 
-If installation finish with some errors. Ignore them at this point.
-
-### 3. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.4.1)
+### 3. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.11)
 ```
 mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
@@ -55,15 +53,19 @@ cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4.1-jetson.tar.gz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-orin-jetpack502.tar.gz
 ```
 
 ```
-tar xzvf libtensorflow-2.4.1-jetson.tar.gz
+tar -xf libtensorflow-2.11-jetson-orin-jetpack502.tar.gz
 ```
 
 ```
-sudo npm install --global node-pre-gyp
+sudo npm install --global node-pre-gyp 
+```
+
+```
+sudo npm install --global node-gyp
 ```
 
 ```
