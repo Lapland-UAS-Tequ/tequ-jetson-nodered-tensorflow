@@ -53,7 +53,7 @@ cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-orin-jetpack502.tar.gz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-orin-jetpack502.tar.gz
 ```
 
 ```
