@@ -198,3 +198,49 @@ First inference is slow and it takes something like ~5-30 seconds. After that it
 If you need to build your own model, you can follow this guide:
 
 https://github.com/Lapland-UAS-Tequ/tequ-tf2-ca-training-pipeline
+
+# Build libtensorflow 2.11 from source 
+
+Install Bazel https://bazel.build/install/bazelisk
+
+```
+cd $home
+```
+
+```
+git clone https://github.com/tensorflow/tensorflow.git
+```
+
+```
+git checkout 2.11
+```
+
+```
+./configure
+```
+
+```
+bazel build --config=opt --copt=-march=native --config=monolithic //tensorflow/tools/lib_package:libtensorflow
+```
+
+```
+cp bazel-bin/tensorflow/tools/lib_package/libtensorflow.tar.gz ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
+```
+
+```
+cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
+```
+
+```
+tar -xf libtensorflow.tar.gz
+```
+
+```
+sudo npm run build-addon-from-source
+```
+
+Sources for building instructions:
+
+- https://www.npmjs.com/package/@tensorflow/tfjs-node
+- https://bazel.build/install/bazelisk
+- https://www.tensorflow.org/install/source
