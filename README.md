@@ -66,7 +66,7 @@ cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.2.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.6.0 
 ```
 
 ```
@@ -275,3 +275,9 @@ Sources for building instructions:
 - https://www.npmjs.com/package/@tensorflow/tfjs-node
 - https://bazel.build/install/bazelisk
 - https://www.tensorflow.org/install/source
+
+# Build libtensorflow 2.4.1 from source 
+
+Instructions are available at https://qengineering.eu/install-tensorflow-2.4.0-on-jetson-nano.html
+
+
