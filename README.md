@@ -33,17 +33,16 @@ This repository is tested with following versions of the components. If you wish
 
 https://github.com/Lapland-UAS-Tequ/tequ-jetson-setup
 
-### 2. Install tfjs-node-gpu
+### 2. Install tfjs-node-gpu and download libtensorflow for Jetpack 5.0.2
 
 ```
 cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.1.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.2.0 
 ```
 
-### 3. Download, extract and install libtensorflow (C-libraries for Tensorflow 2.11)
 ```
 mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
@@ -52,7 +51,6 @@ mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
-Jetpack 5.0.2 
 ```
 wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-5.3-7.2-8.6.tar.gz
 ```
@@ -61,7 +59,24 @@ wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow
 tar -xf libtensorflow-2.11-jetson-5.3-7.2-8.6.tar.gz
 ```
 
-Jetpack 4.6.1 
+### 2. Install tfjs-node-gpu and download libtensorflow for Jetpack 4.6.1
+
+```
+cd ~/.node-red
+```
+
+```
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.2.0 
+```
+
+```
+mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
+```
+
+```
+cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
+```
+
 ```
 wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4.1-jetson.tar.gz
 ```
@@ -70,6 +85,7 @@ wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/lib
 tar -xf libtensorflow-2.4.1-jetson.tar.gz
 ```
 
+### 3. Build tfjs-node-gpu 
 
 ```
 sudo npm install --global node-pre-gyp 
