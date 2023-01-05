@@ -52,13 +52,24 @@ mkdir ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
+Jetpack 5.0.2 
 ```
-wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-orin-jetpack502.tar.gz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-5.3-7.2-8.6.tar.gz
 ```
 
 ```
-tar -xf libtensorflow-2.11-jetson-orin-jetpack502.tar.gz
+tar -xf libtensorflow-2.11-jetson-5.3-7.2-8.6.tar.gz
 ```
+
+Jetpack 4.6.1 
+```
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4.1-jetson.tar.gz
+```
+
+```
+tar -xf libtensorflow-2.4.1-jetson.tar.gz
+```
+
 
 ```
 sudo npm install --global node-pre-gyp 
