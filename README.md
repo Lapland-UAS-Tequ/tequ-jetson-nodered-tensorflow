@@ -199,6 +199,8 @@ https://github.com/Lapland-UAS-Tequ/tequ-tf2-ca-training-pipeline
 
 # Build libtensorflow 2.11 from source 
 
+Tested with Jetson AGX Orin, Jetpack 5.0.2, might work with other setups or might not.
+
 Install Bazel https://bazel.build/install/bazelisk
 
 ```
