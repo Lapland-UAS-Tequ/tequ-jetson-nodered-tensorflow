@@ -25,7 +25,7 @@ This repository is tested with following versions of the components. If you wish
 | libtensorflow | 2.11.0		      | 2.4.1 |
 | Node-RED	    | 3.0.2	          | 3.0.2 |
 | Node.js       | 18.12.1         | 16.19.0 |
-| tfjs-node-gpu | 4.2.0	          | 3.6.0 |
+| tfjs-node-gpu | 4.2.0	          | 3.3.0 |
 
 ## Installation
 
@@ -52,7 +52,7 @@ cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
 ```
-wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-5.3-7.2-8.6.tar.gz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-5.3-7.2-8.7.tar.gz
 ```
 
 ```
@@ -66,7 +66,7 @@ cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.6.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.3.0 
 ```
 
 ```
@@ -78,14 +78,14 @@ cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4.1-jetson.tar.gz
+wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.3-jetson-5.3-7.2-no-tensorrt.tar.gz
 ```
 
 ```
-tar -xf libtensorflow-2.4.1-jetson.tar.gz
+tar -xf libtensorflow-2.3-jetson-5.3-7.2-no-tensorrt.tar.gz
 ```
 
-### 2c. Install tfjs-node-gpu and download libtensorflow without GPU support 
+### 2c. Install tfjs-node-gpu and libtensorflow without GPU support (Jetpack 5.0.2)
 
 ```
 cd ~/.node-red
