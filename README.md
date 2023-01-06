@@ -22,10 +22,11 @@ This repository is tested with following versions of the components. If you wish
 | L4T           | 35.1.1          | 32.7.1 |
 | CUDA          | 11.4            | 10.2.300 |
 | cuDNN         | 8.4.1.50	      | 8.2.1.32 |
-| libtensorflow | 2.11.0		      | 2.4.1 |
+| libtensorflow | 2.11.0		      | 2.3.4 |
 | Node-RED	    | 3.0.2	          | 3.0.2 |
 | Node.js       | 18.12.1         | 16.19.0 |
 | tfjs-node-gpu | 4.2.0	          | 3.3.0 |
+| Python        | 3.8.10          | 3.6.9 |
 
 ## Installation
 
