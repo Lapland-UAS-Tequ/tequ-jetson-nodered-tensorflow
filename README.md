@@ -333,6 +333,14 @@ Sources for building instructions:
 
 # Build libtensorflow 2.4.1 from source 
 
-Instructions are available at https://qengineering.eu/install-tensorflow-2.4.0-on-jetson-nano.html
+- Install Bazel 3.1.3 from source using guide at https://qengineering.eu/install-tensorflow-2.4.0-on-jetson-nano.html
+- git checkout r2.4
+- Configure build without tensorrt (didnt get that to work)
+- Otherwise follow same steps like building r2.11
+
+# libtensorflow libraries build using Jetson AGX Orin and Jetson Xavier AGX
+
+TBD
+
 
 
