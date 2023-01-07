@@ -338,7 +338,7 @@ Sources for building instructions:
 - Configure build without tensorrt (didnt get that to work)
 - Otherwise follow same steps like building r2.11
 
-# libtensorflow libraries build using Jetson AGX Orin and Jetson Xavier AGX
+# libtensorflow libraries build using Jetson boards
 
 TBD
 
