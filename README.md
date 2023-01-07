@@ -67,7 +67,7 @@ cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@3.3.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.2.0 
 ```
 
 ```
