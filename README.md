@@ -338,9 +338,17 @@ Sources for building instructions:
 - Configure build without tensorrt (didnt get that to work)
 - Otherwise follow same steps like building r2.11
 
-# libtensorflow libraries build using Jetson boards
+# libtensorflow libraries 
 
-TBD
+| tensorflow    | Build with        | Jetpack  | Python | Node.js | Cuda | Cuda Capabitilies | TensorRT  | tfjs-node-gpu | Download |
+| ------------- |:-----------------:|:--------:|:------:|:-------:|:----:|:-----------------:|:---------:|:-------------:|:--------:|
+| 2.11          | Jetson AGX Orin   | 5.0.2    | 3.8.10 | 18.12.1 |  yes | 5.3 7.2 8.7       | yes       | 4.2.0         | link     |
+| 2.11          | Jetson AGX Orin   | 5.0.2    | 3.8.10 | 18.12.1 |  -   |  -                | -         | 4.2.0         | link     |
+| 2.4           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  yes |  5.3 7.2          | -         | 4.2.0         | link     |
+| 2.4           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 4.2.0         | link     |
+| 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  yes |  5.3 7.2          | -         | 3.3.0         | link     |
+| 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 3.3.0         | link     |
+
 
 
 
