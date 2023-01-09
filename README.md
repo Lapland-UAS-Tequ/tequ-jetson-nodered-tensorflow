@@ -331,12 +331,27 @@ Sources for building instructions:
 - https://bazel.build/install/bazelisk
 - https://www.tensorflow.org/install/source
 
-# Build libtensorflow 2.4.1 from source 
+# Build libtensorflow 2.3 / 2.4 from source for Jetpack 4.6
 
-- Install Bazel 3.1.3 from source using guide at https://qengineering.eu/install-tensorflow-2.4.0-on-jetson-nano.html
-- git checkout r2.4
+Install Bazel 3.1.0 from source using guide at
+- https://qengineering.eu/install-tensorflow-2.4.0-on-jetson-nano.html
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-pip python3-pip
+sudo apt-get install build-essential zip unzip curl
+sudo apt-get install openjdk-11-jdk
+wget https://github.com/bazelbuild/bazel/releases/download/3.1.0/bazel-3.1.0-dist.zip
+unzip -d bazel bazel-3.1.0-dist.zip
+cd bazel
+env EXTRA_BAZEL_ARGS="--host_javabase=@local_jdk//:jdk" bash ./compile.sh
+sudo cp output/bazel /usr/local/bin/bazel
+```
+
+Build tensorflow 
+Follow steps from 2.11 except 
+- git checkout r2.4 or r2.3
 - Configure build without tensorrt (didnt get that to work)
-- Otherwise follow same steps like building r2.11
 
 # libtensorflow libraries 
 
