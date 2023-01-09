@@ -359,9 +359,9 @@ Follow steps from 2.11 except
 
 | tensorflow    | Build with        | Jetpack  | Python | Node.js | Cuda | Cuda Capabitilies | TensorRT  | tfjs-node-gpu | Download |
 | ------------- |:-----------------:|:--------:|:------:|:-------:|:----:|:-----------------:|:---------:|:-------------:|:--------:|
-| 2.11          | Jetson AGX Orin   | 5.0.2    | 3.8.10 | 18.12.1 |  yes | 5.3 7.2 8.7       | yes       | 4.2.0         | link     |
-| 2.11          | Jetson AGX Orin   | 5.0.2    | 3.8.10 | 18.12.1 |  -   |  -                | -         | 4.2.0         | link     |
-| 2.4           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  yes |  5.3 7.2          | -         | 4.2.0         | link     |
-| 2.4           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 4.2.0         | link     |
-| 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  yes |  5.3 7.2          | -         | 3.3.0         | link     |
-| 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 3.3.0         | link     |
+| 2.11          | Jetson AGX Orin   | 5.0.2    | 3.8.10 | 18.12.1 |  yes | 5.3 7.2 8.7       | yes       | 4.2.0         | <a href="https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2-11-jetson-cpu.tar.gz">link</>     |
+| 2.11          | Jetson AGX Orin   | 5.0.2    | 3.8.10 | 18.12.1 |  -   |  -                | -         | 4.2.0         | <a href="https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.11-jetson-5.3-7.2-8.7.tar.gz">link</>     |
+| 2.4           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  yes |  5.3 7.2          | -         | 4.2.0         | <a href="https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4-jetson-5.3-7.2-no-tensorrt.tar.gz">link</>     |
+| 2.4           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 4.2.0         | <a href="https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4-jetson-cpu.tar.gz">link</>     |
+| 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  yes |  5.3 7.2          | -         | 3.3.0         | <a href="https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.3-jetson-5.3-7.2-no-tensorrt.tar.gz">link</>     |
+| 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 3.3.0         | <a href="https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.3-jetson-cpu.tar.gz">link</>     |
