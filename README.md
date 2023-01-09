@@ -279,7 +279,9 @@ If you need to build your own model, you can follow this guide:
 
 https://github.com/Lapland-UAS-Tequ/tequ-tf2-ca-training-pipeline
 
-# Build libtensorflow 2.11 from source 
+#  libtensorflow 
+
+## Build libtensorflow 2.11 from source 
 
 Tested with Jetson AGX Orin, Jetpack 5.0.2, might work with other setups or might not.
 
@@ -331,7 +333,7 @@ Sources for building instructions:
 - https://bazel.build/install/bazelisk
 - https://www.tensorflow.org/install/source
 
-# Build libtensorflow 2.3 / 2.4 from source for Jetpack 4.6
+## Build libtensorflow 2.3 / 2.4 from source for Jetpack 4.6
 
 Install Bazel 3.1.0 from source using guide at
 - https://qengineering.eu/install-tensorflow-2.4.0-on-jetson-nano.html
@@ -353,7 +355,7 @@ Follow steps from 2.11 except
 - git checkout r2.4 or r2.3
 - Configure build without tensorrt (didnt get that to work)
 
-# libtensorflow libraries 
+## pre-built libtensorflow libraries 
 
 | tensorflow    | Build with        | Jetpack  | Python | Node.js | Cuda | Cuda Capabitilies | TensorRT  | tfjs-node-gpu | Download |
 | ------------- |:-----------------:|:--------:|:------:|:-------:|:----:|:-----------------:|:---------:|:-------------:|:--------:|
@@ -363,7 +365,3 @@ Follow steps from 2.11 except
 | 2.4           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 4.2.0         | link     |
 | 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  yes |  5.3 7.2          | -         | 3.3.0         | link     |
 | 2.3           | Jetson AGX Xavier | 4.6.1    | 3.6.9  | 16.19.0 |  no  |  -                | -         | 3.3.0         | link     |
-
-
-
-
