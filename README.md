@@ -57,7 +57,7 @@ wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow
 ```
 
 ```
-tar -xf libtensorflow-2.11-jetson-5.3-7.2-8.6.tar.gz
+tar -xf libtensorflow-2.11-jetson-5.3-7.2-8.7.tar.gz
 ```
 
 ### 2b. Install tfjs-node-gpu and download libtensorflow for Jetpack 4.6.1
