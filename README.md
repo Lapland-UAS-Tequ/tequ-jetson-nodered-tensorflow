@@ -79,7 +79,7 @@ cd ~/.node-red/node_modules/@tensorflow/tfjs-node-gpu/deps
 ```
 
 ```
-wget https://jetson-nodered-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4-jetson-5.3-7.2-no-tensorrt.tar.gz
+wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow-2.4-jetson-5.3-7.2-no-tensorrt.tar.gz
 ```
 
 ```
