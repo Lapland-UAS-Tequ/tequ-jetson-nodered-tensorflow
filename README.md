@@ -34,7 +34,7 @@ This repository is tested with following versions of the components. If you wish
 
 https://github.com/Lapland-UAS-Tequ/tequ-jetson-setup
 
-### 2a. Install tfjs-node-gpu and download libtensorflow for Jetpack <5
+### 2a. Install tfjs-node-gpu and download libtensorflow for Jetpack 5.x
 
 ```
 cd ~/.node-red
@@ -86,7 +86,7 @@ wget https://tequ-files.s3.eu.cloud-object-storage.appdomain.cloud/libtensorflow
 tar -xf libtensorflow-2.4-jetson-5.3-7.2-no-tensorrt.tar.gz
 ```
 
-### 2c. Install tfjs-node-gpu and libtensorflow without GPU support (Jetpack <5)
+### 2c. Install tfjs-node-gpu and libtensorflow without GPU support (Jetpack 5.x)
 
 ```
 cd ~/.node-red
