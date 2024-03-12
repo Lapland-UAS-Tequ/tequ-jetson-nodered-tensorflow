@@ -41,7 +41,7 @@ cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.2.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.17.0 
 ```
 
 ```
@@ -93,7 +93,7 @@ cd ~/.node-red
 ```
 
 ```
-npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.2.0 
+npm install --ignore-scripts @tensorflow/tfjs-node-gpu@4.17.0 
 ```
 
 ```
