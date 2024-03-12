@@ -16,17 +16,17 @@ https://github.com/Lapland-UAS-Tequ/tequ-api-client/
 
 This repository is tested with following versions of the components. If you wish to use another setup, there might be issues and you might have to build Tensorflow from source for your Jetson machine.
 
-| Software      | Jetson AGX Orin | Neousys NRU-120S (AGX Xavier) |
-| ------------- |:---------------:|:-----------------------------:|
-| Jetpack       | 5.0.2           | 4.6.1 |
-| L4T           | 35.1.1          | 32.7.1 |
-| CUDA          | 11.4            | 10.2.300 |
-| cuDNN         | 8.4.1.50	      | 8.2.1.32 |
-| libtensorflow | 2.11.0		      | 2.4.x |
-| Node-RED	    | 3.0.2	          | 3.0.2 |
-| Node.js       | 18.12.1         | 16.19.0 |
-| tfjs-node-gpu | 4.2.0	          | 4.2.0 |
-| Python        | 3.8.10          | 3.6.9 |
+| Software      | Jetson AGX Orin | Jetson NX | Neousys NRU-120S (AGX Xavier) |
+| ------------- |:---------------:|:---------------:|:-----------------------------:|
+| Jetpack       | 5.0.2           | 5.1 | 4.6.1 |
+| L4T           | 35.1.1          | 35.2.1 | 32.7.1 |
+| CUDA          | 11.4            | 11.4.315 | 10.2.300 |
+| cuDNN         | 8.4.1.50	      | 8.6.0.166 | 8.2.1.32 |
+| libtensorflow | 2.11.0		      | 2.11.0 | 2.4.x |
+| Node-RED	    | 3.0.2	          | 3.1.7 | 3.0.2 |
+| Node.js       | 18.12.1         | 20.11.1 | 16.19.0 |
+| tfjs-node-gpu | 4.2.0	          | 4.17.0 | 4.2.0 |
+| Python        | 3.8.10          | 3.8.10  | 3.6.9 |
 
 ## Installation
 
